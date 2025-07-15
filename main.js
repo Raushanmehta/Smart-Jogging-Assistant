@@ -14,7 +14,7 @@ let startTime = null;
 let timerInterval = null;
 let watchId = null;
 
-// ✅ Network Info
+// Network Info
 function updateNetworkStatus() {
   if ('connection' in navigator) {
     const conn = navigator.connection;
@@ -28,7 +28,7 @@ function updateNetworkStatus() {
 }
 updateNetworkStatus();
 
-// ✅ Format time
+//  Format time
 function formatDuration(ms) {
   const total = Math.floor(ms / 1000);
   const mins = Math.floor(total / 60);
@@ -36,7 +36,7 @@ function formatDuration(ms) {
   return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
-// ✅ Calculate distance
+//  Calculate distance
 function calcDistance(lat1, lon1, lat2, lon2) {
   const toRad = deg => deg * Math.PI / 180;
   const R = 6371000;
@@ -48,7 +48,7 @@ function calcDistance(lat1, lon1, lat2, lon2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-// ✅ Draw line only
+//  Draw line only
 function drawRoute() {
   ctx.clearRect(0, 0, routeCanvas.width, routeCanvas.height);
   if (positions.length < 2) return;
@@ -77,7 +77,7 @@ function drawRoute() {
   ctx.stroke();
 }
 
-// ✅ Update distance
+//  Update distance
 function updateDistance() {
   let dist = 0;
   const MIN_STEP = 2; // Ignore noise
@@ -91,7 +91,7 @@ function updateDistance() {
   distanceSpan.textContent = dist.toFixed(1);
 }
 
-// ✅ Start
+
 function startJogging() {
   if (!navigator.geolocation) {
     errorMsg.textContent = "Geolocation not supported!";
@@ -127,7 +127,7 @@ function startJogging() {
   );
 }
 
-// ✅ Stop
+
 function stopJogging() {
   jogging = false;
   startBtn.disabled = false;
@@ -137,11 +137,11 @@ function stopJogging() {
   errorMsg.textContent = "";
 }
 
-// ✅ Event Listeners
+
 startBtn.addEventListener("click", startJogging);
 stopBtn.addEventListener("click", stopJogging);
 
-// ✅ IntersectionObserver (background effect)
+
 if ('IntersectionObserver' in window) {
   const statsElem = document.querySelector('.stats');
   const observer = new IntersectionObserver(entries => {
