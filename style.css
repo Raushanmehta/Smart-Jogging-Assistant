@@ -1,0 +1,61 @@
+body {
+  background: linear-gradient(120deg, #eaf6ff, #fff3e6 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 32px 16px;
+}
+h1 {
+  text-align: center;
+  color: #1e6b7b;
+}
+.controls {
+  text-align: center;
+  margin-bottom: 12px;
+}
+button {
+  background: #1e6b7b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background .2s;
+}
+button:disabled {
+  background: #a0c4d6;
+  cursor: not-allowed;
+}
+#networkStatus {
+  margin-left: 12px;
+  font-size: 0.95rem;
+  color: #fd7e14;
+}
+canvas {
+  display: block;
+  background: #fafbfc;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px rgba(30,107,123,0.07);
+  margin: 20px auto;
+}
+.stats {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 1.15rem;
+  color: #222;
+}
+#errorMsg {
+  color: #e63946;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+}

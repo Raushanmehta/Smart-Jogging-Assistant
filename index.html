@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Jogging Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Jogging Assistant</h1>
+    <div class="controls">
+      <button id="startBtn">Start Jog</button>
+      <button id="stopBtn" disabled>Stop Jog</button>
+      <span id="networkStatus"></span>
+    </div>
+    <canvas id="routeCanvas" width="350" height="350"></canvas>
+    <div class="stats">
+      <p><strong>Duration:</strong> <span id="duration">0:00</span></p>
+      <p><strong>Distance:</strong> <span id="distance">0</span> m</p>
+    </div>
+    <div id="errorMsg"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
