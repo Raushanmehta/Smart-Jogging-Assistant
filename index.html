@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Smart Jogging Assistant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -15,22 +15,18 @@
       <button id="stopBtn" disabled>Stop Jog</button>
     </div>
 
-    <!-- Network Info (2 lines) -->
-    <div id="networkStatus">
-      <p id="networkType">Connection Type: Unknown</p>
-      <p id="networkSpeed">Download Speed: Unknown</p>
+    <div class="network">
+      <p id="networkType"></p>
+      <p id="networkSpeed"></p>
     </div>
 
-    <!-- Jogging Route -->
     <canvas id="routeCanvas" width="350" height="350"></canvas>
 
-    <!-- Jogging Stats -->
     <div class="stats">
       <p><strong>Duration:</strong> <span id="duration">0:00</span></p>
       <p><strong>Distance:</strong> <span id="distance">0</span> m</p>
     </div>
 
-    <!-- Error messages -->
     <div id="errorMsg"></div>
   </div>
 
